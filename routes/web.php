@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('quanly',[
+	'as'=>'trang-admin',
+	'uses'=>'Pagecontroller@getAdmin'
+]);
