@@ -22,6 +22,10 @@ Route::get('adminQuatang',[
 	'as'=>'trang-quatang',
 	'uses'=>'Pagecontroller@getGift'
 ]);
+Route::get('seachQuaTang',[
+	'as'=>'seach-quatang',
+	'uses'=>'Pagecontroller@getSearchGift'
+]);
 Route::get('themQuaTang',[
 	'as'=>'them-quatang',
 	'uses'=>'Pagecontroller@getQuatang'

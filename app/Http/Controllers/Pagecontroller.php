@@ -28,6 +28,13 @@ class Pagecontroller extends Controller
     	$gift = gift::all();
     	return view('page.adminQuaTang',compact('gift'));
     }
+    public function getSearchGift(Request $req)
+    {
+        $gift = gift::where('name','like','%'.$req->key.'%')
+                            ->orWhere('id',$req->key)
+                            ->get();
+        return view('page.seachGift',compact('gift'));
+    }
     public function getQuatang()
     {
     	$gift = gift::all();
