@@ -7,8 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class player extends Model
 {
     protected $table = "player";
-    public function User()
+    public function user()
     {
-    	return $this->belongsTo('app\User','id_user','id');
+    	return $this->belongsTo('app\user','id_user','id');
+    }
+    public function game()
+    {
+    	return $this->belongsTo('app\game','id_game','id');
     }
 }

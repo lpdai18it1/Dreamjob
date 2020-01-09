@@ -18,3 +18,16 @@ Route::get('quanly',[
 	'as'=>'trang-admin',
 	'uses'=>'Pagecontroller@getAdmin'
 ]);
+Route::get('adminQuatang',[
+	'as'=>'trang-quatang',
+	'uses'=>'Pagecontroller@getGift'
+]);
+Route::get('themQuaTang',[
+	'as'=>'them-quatang',
+	'uses'=>'Pagecontroller@getQuatang'
+]);
+Route::post('themQuaTang',[
+	'as'=>'them-quatang',
+	'uses'=>'Pagecontroller@postQuatang'
+]);
+

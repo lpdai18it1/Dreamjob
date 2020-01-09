@@ -19,8 +19,8 @@ class children extends Model
 	{
 		return $this->belongsTo('app\chart','id_childen','id');
 	}
-	public function parent()
+	public function parents()
 	{
-		return $this->hasMany('app\parent','id_children','id');
+		return $this->hasMany('app\parents','id_children','id');
 	}
 }

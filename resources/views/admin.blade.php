@@ -15,6 +15,11 @@
 	<script src="js/html5shiv.js"></script>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<style type="text/css">
+		.form-control{
+			width: 50%;
+		}
+	</style>
 </head>
 <body>
 	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -72,35 +77,7 @@
 			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
-	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
-		<div class="profile-sidebar">
-			<div class="profile-userpic">
-				<img id="image" src="lumino/image/author.jpg" class="img-responsive" alt="">
-			</div>
-			<div class="profile-usertitle">
-				<div class="profile-usertitle-name">Admin</div>
-				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="divider"></div>
-		<form role="search">
-			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
-			</div>
-		</form>
-		<ul class="nav menu">
-			<li class="active"><a href="Admin.html"><em class="fa fa fa-home">&nbsp;</em> Trang Chủ</a></li>
-			<li><a href="dl.html"><em class="fa fa-bar-chart">&nbsp;</em> Quản lý quà tặng</a></li>
-			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
-			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
-			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
-			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
-			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
-			<li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
-		</ul>
-	</div><!--/.sidebar-->
-		
+	
 		@yield('content')		
 
 	  
