@@ -46,5 +46,16 @@ Route::post('suaQuaTang/{id}',[
 	'as'=>'sua-quatang',
 	'uses'=>'Pagecontroller@postSuaQuatang'
 ]);
-
+Route::get('sendGift',[
+	'as'=>'send-gift',
+	'uses'=>'Pagecontroller@getSendGift'
+]);
+Route::get('xoaSendGift/{id}',[
+	'as'=>'xoa-sendgift',
+	'uses'=>'Pagecontroller@getxoaSendGift'
+]);
+Route::get('seachSendGift',[
+	'as'=>'seach-send',
+	'uses'=>'Pagecontroller@getSearchSendGift'
+]);
 

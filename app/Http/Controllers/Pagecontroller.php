@@ -77,4 +77,22 @@ class Pagecontroller extends Controller
         unset($req);
         return redirect()->back()->with('thongbao','Cập nhật sản phẩm thành công'); 
     }
+    public function getSendGift()
+    {
+    	$send = send_gift::all();
+    	return view('page.trangAdminSendGift',compact('send'));
+    }
+    public function getxoaSendGift($id)
+    {
+    	$send = send_gift::find($id);
+    	$send->delete();
+    	return redirect()->back()->with('thongbao','xóa Quà tặng thành công');
+    }
+    public function getSearchSendGift(Request $req)
+    {
+        $send = send_gift::where('address','like','%'.$req->key.'%')
+                            ->orWhere('id',$req->key)
+                            ->get();
+        return view('page.seachSendGift',compact('send'));
+    }
 }

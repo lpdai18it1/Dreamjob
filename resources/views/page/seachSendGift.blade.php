@@ -19,8 +19,8 @@
 		</form>
 		<ul class="nav menu">
 			<li><a href="{{route('trang-admin')}}"><em class="fa fa fa-home">&nbsp;</em> Trang Chủ</a></li>
-			<li class="active"><a href="{{route('trang-quatang')}}"><em class="fa fa-bar-chart">&nbsp;</em> Quản lý quà tặng</a></li>
-			<li><a href="{{route('send-gift')}}"><em class="fa fa-bar-chart">&nbsp;</em>Quản lý đơn quà tặng</a></li>
+			<li><a href="{{route('trang-quatang')}}"><em class="fa fa-bar-chart">&nbsp;</em> Quản lý quà tặng</a></li>
+			<li  class="active"><a href="{{route('send-gift')}}"><em class="fa fa-bar-chart">&nbsp;</em>Quản lý đơn quà tặng</a></li>
 			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
 			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
 			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
@@ -34,13 +34,13 @@
 				<li><a href="{{route('trang-admin')}}">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Quản lý quà tặng</li>
+				<li class="active">Quản lý đơn quà tặng</li>
 			</ol>
 		</div><!--/.row-->
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Quản lý quà tặng</h1>
+				<h1 class="page-header">Quản lý đơn quà tặng</h1>
 			</div>
 		</div><!--/.row-->
 		<div class="panel panel-container">
@@ -48,15 +48,15 @@
 				<div class="col-xs-9 col-md-6 col-lg-6 no-padding">
 					<div class="panel panel-teal panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-shopping-cart color-blue"></em>
-							<div class="large">{{count($gift)}}</div>
-							<div class="text-muted">Quà tặng</div>
+							<div class="large">{{count($send)}}</div>
+							<div class="text-muted">Đơn Quà tặng</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-xs-9 col-md-6 col-lg-6 no-padding">
 					<div class="panel panel-teal panel-widget border-right">
 						<div class="beta-comp">
-						<form role="search" method="get" id="searchform" action="{{route('seach-quatang')}}">
+						<form role="search" method="get" id="searchform" action="{{route('seach-send')}}">
 					        <input type="text" value="" name="key" id="s" placeholder="Nhập từ khóa..." />
 					        <button class="fa fa-search" type="submit" id="searchsubmit"></button>
 						</form>
@@ -66,37 +66,29 @@
 			</div><!--/.row-->
 		</div>
 		<div class="row">
-			<div class="col-lg-12">
-				<a href="{{route('them-quatang')}}"><button type="submit" class="btn btn-primary">Thêm Quà tặng</button></a>
-			</div>	
-		</div>
-		<div class="row"><h3 style="text-align: center;">@if(Session::has('thongbao')){{Session::get('thongbao')}}@endif</h3><br></div>
-		<div class="row">
 
 		  		<table class="table table-bordered">
     				<thead>
       					<tr>
         					<th>id</th>
-        					<th>name</th>
-        					<th>quantity</th>
-        					<th>point</th>
-        					<th>description</th>
-        					<th>image</th>
+        					<th>id_children</th>
+        					<th>address</th>
+        					<th>phone_parent</th>
+        					<th>status</th>
+        					<th>id_gift</th>
         					<th>Delete</th>
-        					<th>Edit</th>
       					</tr>
     				</thead>
     				<tbody>
-    					@foreach($gift as $g)
+    					@foreach($send as $s)
       					<tr>
-        					<td>{{$g->id}}</td>
-        					<td>{{$g->name}}</td>
-        					<td>{{$g->quantity}}</td>
-        					<td>{{$g->point}}</td>
-        					<td>{!! $g->description !!}</td>
-        					<td>{{$g->image}}</td>
-        					<td><a href="{{route('xoa-quatang',$g->id)}}"><em class="fa fa-xl fas fa-trash color-red"></em></a></td>
-        					<td><a href="{{route('sua-quatang',$g->id)}}"><em class="fa fa-xl fa fa-search color-blue"></em></a></td>
+        					<td>{{$s->id}}</td>
+        					<td>{{$s->id_children}}</td>
+        					<td>{{$s->address}}</td>
+        					<td>{{$s->phone_parent}}</td>
+        					<td>{{$s->status}}</td>
+        					<td>{{$s->id_gift }}</td>
+        					<td><a href="{{route('xoa-sendgift',$s->id)}}"><em class="fa fa-xl fas fa-trash color-red"></em></a></td>
       					</tr>
       					@endforeach
     				</tbody>
