@@ -30,4 +30,17 @@ Route::post('themQuaTang',[
 	'as'=>'them-quatang',
 	'uses'=>'Pagecontroller@postQuatang'
 ]);
+Route::get('xoaQuaTang/{id}',[
+	'as'=>'xoa-quatang',
+	'uses'=>'Pagecontroller@getxoaQuatang'
+]);
+Route::get('suaQuaTang/{id}',[
+	'as'=>'sua-quatang',
+	'uses'=>'Pagecontroller@getSuaQuatang'
+]);
+Route::post('suaQuaTang/{id}',[
+	'as'=>'sua-quatang',
+	'uses'=>'Pagecontroller@postSuaQuatang'
+]);
+
 

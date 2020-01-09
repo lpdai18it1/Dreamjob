@@ -44,4 +44,30 @@ class Pagecontroller extends Controller
     	$gift->save();
         return redirect()->back()->with('thongbao','Thêm Quà tặng thành công');
     }
+    public function getxoaQuatang($id)
+    {
+    	$gift = gift::find($id);
+    	$gift->delete();
+    	return redirect()->back()->with('thongbao','xóa Quà tặng thành công');
+    }
+    public function getSuaQuatang($id)
+    {
+    	$gift = gift::find($id);
+    	return view('page.suaQuatang',compact('gift','id'));
+    }
+    public function postSuaQuatang(Request $req, $id)
+    {
+        $edit = new gift;
+        $editid = $edit->find($id);
+        $editid->name = $req->name;
+        $editid->quantity = $req->quantity;
+        $editid->point = $req->point;
+        $editid->description = $req->notes;
+        if($req->anh != NUll){
+            $editid->image = $req->anh;
+        }
+        $editid->save();
+        unset($req);
+        return redirect()->back()->with('thongbao','Cập nhật sản phẩm thành công'); 
+    }
 }

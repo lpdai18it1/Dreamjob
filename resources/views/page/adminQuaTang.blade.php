@@ -70,6 +70,7 @@
 				<a href="{{route('them-quatang')}}"><button type="submit" class="btn btn-primary">Thêm Quà tặng</button></a>
 			</div>	
 		</div>
+		<div class="row"><h3 style="text-align: center;">@if(Session::has('thongbao')){{Session::get('thongbao')}}@endif</h3><br></div>
 		<div class="row">
 
 		  		<table class="table table-bordered">
@@ -94,8 +95,8 @@
         					<td>{{$g->point}}</td>
         					<td>{!! $g->description !!}</td>
         					<td>{{$g->image}}</td>
-        					<td><a href="#"><em class="fa fa-xl fas fa-trash color-red"></em></a></td>
-        					<td><a href="#"><em class="fa fa-xl fa fa-search color-blue"></em></a></td>
+        					<td><a href="{{route('xoa-quatang',$g->id)}}"><em class="fa fa-xl fas fa-trash color-red"></em></a></td>
+        					<td><a href="{{route('sua-quatang',$g->id)}}"><em class="fa fa-xl fa fa-search color-blue"></em></a></td>
       					</tr>
       					@endforeach
     				</tbody>

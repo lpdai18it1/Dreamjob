@@ -8,7 +8,7 @@
 	<link href="lumino/css/font-awesome.min.css" rel="stylesheet">
 	<link href="lumino/css/datepicker3.css" rel="stylesheet">
 	<link href="lumino/css/styles.css" rel="stylesheet">
-	
+	<script src="//cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
 	<!--Custom Font-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 	<!--[if lt IE 9]>
