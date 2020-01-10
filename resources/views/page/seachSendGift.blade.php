@@ -76,6 +76,7 @@
         					<th>phone_parent</th>
         					<th>status</th>
         					<th>id_gift</th>
+        					<th>Update Status</th>
         					<th>Delete</th>
       					</tr>
     				</thead>
@@ -88,6 +89,7 @@
         					<td>{{$s->phone_parent}}</td>
         					<td>{{$s->status}}</td>
         					<td>{{$s->id_gift }}</td>
+        					<td><a href="{{route('cn-dh',$s->id)}}"><em class="fa fa-xl fa fa-search color-blue"></em></a></td>
         					<td><a href="{{route('xoa-sendgift',$s->id)}}"><em class="fa fa-xl fas fa-trash color-red"></em></a></td>
       					</tr>
       					@endforeach

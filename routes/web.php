@@ -58,4 +58,12 @@ Route::get('seachSendGift',[
 	'as'=>'seach-send',
 	'uses'=>'Pagecontroller@getSearchSendGift'
 ]);
+Route::get('cnQuaTang/{id}',[
+	'as'=>'cn-dh',
+	'uses'=>'Pagecontroller@getCnQuatang'
+]);
+Route::post('cnQuaTang/{id}',[
+	'as'=>'cn-dh',
+	'uses'=>'Pagecontroller@postCnQuatang'
+]);
 

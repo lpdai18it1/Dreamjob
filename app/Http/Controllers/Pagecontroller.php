@@ -95,4 +95,18 @@ class Pagecontroller extends Controller
                             ->get();
         return view('page.seachSendGift',compact('send'));
     }
+    public function getCnQuatang($id)
+    {
+        $edit = send_gift::find($id);
+        return view('page.cnDonGift',compact('edit','id'));
+    }
+    public function postCnQuatang(Request $req, $id)
+    {
+        $edit = new send_gift;
+        $editid = $edit->find($id);
+        $editid->status = $req->trangthai;
+        $editid->save();
+        unset($req);
+        return redirect()->back()->with('thongbao','Cập nhật sản phẩm thành công'); 
+    }
 }
