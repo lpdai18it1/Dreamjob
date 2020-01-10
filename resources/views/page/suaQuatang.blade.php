@@ -20,11 +20,14 @@
 		<ul class="nav menu">
 			<li><a href="{{route('trang-admin')}}"><em class="fa fa fa-home">&nbsp;</em> Trang Chủ</a></li>
 			<li class="active"><a href="{{route('trang-quatang')}}"><em class="fa fa-bar-chart">&nbsp;</em> Quản lý quà tặng</a></li>
-			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
-			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
-			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
-			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
-			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Dữ liệu bảng</a></li>
+			<li><a href="{{route('trang-children')}}"><em class="fa fa-bar-chart">&nbsp;</em> Quản lý trẻ</a></li>
+			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Quản lý phụ huynh</a></li>
+			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Quản lý user</a></li>
+			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Quản lý game</a></li>
+			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Quản lý player</a></li>
+			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Quản lý Chart</a></li>
+			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Quản lý hoạt động trẻ</a></li>
+			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Quản lý comment</a></li>
 			<li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->

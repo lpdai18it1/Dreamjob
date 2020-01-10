@@ -109,4 +109,9 @@ class Pagecontroller extends Controller
         unset($req);
         return redirect()->back()->with('thongbao','Cập nhật sản phẩm thành công'); 
     }
+    public function getChildren()
+    {
+        $chil = children::all();
+        return view('page.trangAdminChildren',compact('chil'));
+    }
 }

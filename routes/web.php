@@ -66,4 +66,8 @@ Route::post('cnQuaTang/{id}',[
 	'as'=>'cn-dh',
 	'uses'=>'Pagecontroller@postCnQuatang'
 ]);
+Route::get('adminChildren',[
+	'as'=>'trang-children',
+	'uses'=>'Pagecontroller@getChildren'
+]);
 
